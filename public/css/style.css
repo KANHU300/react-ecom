@@ -43,6 +43,9 @@ body {
 /*for fixed header*/
 .header {
   height: auto;
+  position: fixed;
+  top: 0px;
+  left: 0px;
   z-index: 99999;
   width: 100%;
 }
@@ -117,8 +120,44 @@ body {
   right: 2px;
   height: 95%;
   width: auto;
-  background: #f0f0d6;
   padding: 10px;
+}
+.header .nvbar-edit .nav-menu .navUl-edit .suggestions-container {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  width: 100%;
+  width: 600px;
+  height: auto;
+  overflow-y: scroll;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .header .nvbar-edit .nav-menu .navUl-edit .suggestions-container {
+    width: 340px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .header .nvbar-edit .nav-menu .navUl-edit .suggestions-container {
+    width: 400px;
+  }
+}
+.header .nvbar-edit .nav-menu .navUl-edit .suggestions-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.header .nvbar-edit .nav-menu .navUl-edit .active-suggestion {
+  background-color: rgb(238, 234, 234);
+}
+.header .nvbar-edit .nav-menu .navUl-edit .suggestion-link {
+  display: block;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: black;
+}
+.header .nvbar-edit .nav-menu .navUl-edit .suggestion-link:hover {
+  background-color: #f0f0f0;
 }
 .header .nvbar-edit .nav-menu .navmenu-items {
   margin-left: auto;
@@ -563,7 +602,7 @@ body {
 }
 
 .slider-wrapper {
-  margin: 32px 0;
+  margin: 90px 0;
 }
 
 .main-content {

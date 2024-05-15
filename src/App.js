@@ -8,6 +8,8 @@ import Layout from './Pages/Layout/Layout'
 import ProductView from './Pages/ProductView.js/ProductView';
 import CategoryProduct from './Pages/CategoryProduct/CategoryProduct';
 import Cart from './Pages/Cart/Cart';
+import WishList from './Pages/WishList/WishList';
+import SearchPage from './Pages/SearchPage/SearchPage';
 
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
           
           <Route path = "/category/:category" element = {<CategoryProduct />} />
           <Route path = "/cart"  element={<Cart/>}/>
+          <Route path = "/wishlist"  element={<WishList/>}/>
+          <Route path = "/search/:searchTerm"  element={<SearchPage/>}/>
 
           
           

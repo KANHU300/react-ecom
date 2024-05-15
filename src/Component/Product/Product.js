@@ -1,7 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useDispatch,  } from 'react-redux';
+import { addToWishlist,  } from '../../store/cartSlice';
 
 const Product = ({ product}) => {
+
+  const dispatch = useDispatch();
+
+
+
+  const handleAddToWishlist = () => {
+      dispatch(addToWishlist(product));
+  };
   return (
     <>
       <div className="card product-card">
@@ -49,43 +59,18 @@ const Product = ({ product}) => {
           <p className="item-price p-0">
             Discount: {product.discountPercentage}%
           </p>
-          <button className="btn add-cart">
-            <img
+          <button className="btn add-cart" onClick={handleAddToWishlist}>
+            {/* <img
               src="/images/bag-2-svgrepo-com.svg"
               alt=".."
               className="bag-icon"
-            />
-            Add To Cart
+            /> */}
+            Add To wishlist
           </button>
         </div>
       </div>
 
-      {/* <Link to={`/product/${product.id}`} key={product.id}> */}
-      {/* <div class="product-card">
-  <div class="product-image">
-    <img src = {product?.images[0]} alt = {product.title} />
-  </div>
-  <div class="product-info">
-    <h2 class="product-title">{product.title}</h2>
-    <p class="product-description">{product.description}</p>
-    <div class="product-details">
-      <p class="product-price">
-        Price: $<span>{product.price}</span>
-      </p>
-      <p class="product-discount">
-        Discount: {product.discountPercentage}%
-      </p>
-      <p class="product-rating">
-        Rating: {product.rating}
-      </p>
-      <p class="product-stock">
-        Stock: {product.stock}
-      </p>
-    </div>
-    <button class="add-to-cart-btn">Add to Cart</button>
-  </div>
-</div> */}
-      {/* </Link> */}
+    
     </>
   );
 };

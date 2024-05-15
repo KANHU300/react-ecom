@@ -77,7 +77,7 @@ const Sidebar = ({ show, handleClose }) => {
           <div className="sidebar-cnt ">
             <ul className="cat-list list-unstyled">
               {categories.map((category, idx) => (
-                <li key={idx} className="text-decoration-none">
+                <li key={idx} className="text-decoration-none" onClick={handleClose}>
                   <Link to={`category/${category}`} className="cat-list-link text-capitalize text-decoration-none">
                     {category.replace("-", " ")}
                   </Link>

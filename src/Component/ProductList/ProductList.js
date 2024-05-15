@@ -2,7 +2,7 @@ import React from 'react';
 
 import Product from "../Product/Product";
 const ProductList = ({ products }) => {
-  console.log("products are:", products);
+  // console.log("products are:", products);
 
  
 

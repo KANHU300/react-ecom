@@ -1,5 +1,5 @@
 import React from 'react'
-import { getAllCarts,removeFromCart,clearCart,getCartTotal } from '../../store/cartSlice'
+import { getAllCarts,removeFromCart,clearCart,getCartTotal,toggleCartQty,  } from '../../store/cartSlice'
 import { useDispatch, useSelector } from 'react-redux';
 import "../Cart/cart.css"
 import { Link } from 'react-router-dom';
@@ -66,7 +66,7 @@ const Cart = () => {
                     </div>
                     <div className='cart-ctd'>
                       <div className='qty-change flex align-center'>
-                        <button type = "button" className='qty-decrease flex align-center justify-center' >
+                        <button type = "button" className='qty-decrease flex align-center justify-center'onClick={() => dispatch(toggleCartQty({id: cart?.id, type: "DEC"}))} >
                           <i className='fas fa-minus'></i>
                         </button>
 
@@ -74,7 +74,7 @@ const Cart = () => {
                           {cart?.quantity}
                         </div>
 
-                        <button type = "button" className='qty-increase flex align-center justify-center' >
+                        <button type = "button" className='qty-increase flex align-center justify-center' onClick={() => dispatch(toggleCartQty({id: cart?.id, type: "INC"}))}>
                           <i className='fas fa-plus'></i>
                         </button>
                       </div>

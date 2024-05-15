@@ -33,9 +33,8 @@ if(productSingleStatus === STATUS.LOADING){
 }
 const increaseQty = ()=>{
   setQuantity((prevQty)=>{
-
     let tempQty = prevQty + 1 ;
-    if(tempQty > product ?.stock) tempQty = product?.stock; 
+    if(tempQty > product?.stock) tempQty = product?.stock; 
     return tempQty;
 
   })
@@ -62,8 +61,8 @@ const addToCartHandler = (product) => {
 
 
   return (
-    <>
-    <main className='py-5 bg-whitesmoke'>
+    <> <main className='py-5 bg-whitesmoke' style={{marginTop:'70px'}}>
+   
       <div className='product-single'>
         <div className='container'>
           <div className='product-single-content bg-white grid'>
