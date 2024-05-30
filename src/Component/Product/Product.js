@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useDispatch,  } from 'react-redux';
 import { addToWishlist,  } from '../../store/cartSlice';
 
-const Product = ({ product}) => {
+const Product = ({ product,customclass}) => {
 
   const dispatch = useDispatch();
 
@@ -14,7 +14,7 @@ const Product = ({ product}) => {
   };
   return (
     <>
-      <div className="card product-card">
+      <div className={`card product-card ${customclass}`}>
         <Link
           to={`/product/${product?.id}`}
           key={product?.id}

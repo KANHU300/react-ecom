@@ -119,7 +119,7 @@ const addToCartHandler = (product) => {
                   <div className='brand'>
                     <span className='text-orange fw-5'>Category:</span>
                     <span className='mx-1 text-capitalize'>
-                      {product?.category ? product.category.replace("-", " ") : ""}
+                      {product?.category ? product.category : ""}
                     </span>
                   </div>
                 </div>

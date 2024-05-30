@@ -10,6 +10,7 @@ import CategoryProduct from './Pages/CategoryProduct/CategoryProduct';
 import Cart from './Pages/Cart/Cart';
 import WishList from './Pages/WishList/WishList';
 import SearchPage from './Pages/SearchPage/SearchPage';
+import FilterPage from './Pages/FilterPage/FilterPage';
 
 
 function App() {
@@ -25,10 +26,7 @@ function App() {
           <Route path = "/cart"  element={<Cart/>}/>
           <Route path = "/wishlist"  element={<WishList/>}/>
           <Route path = "/search/:searchTerm"  element={<SearchPage/>}/>
-
-          
-          
-
+          <Route path = "/filterPage"  element={<FilterPage/>}/>
         </Route>
 
       </Routes>

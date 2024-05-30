@@ -1,8 +1,7 @@
 import React from 'react';
 
 import Product from "../Product/Product";
-const ProductList = ({ products }) => {
-  // console.log("products are:", products);
+const ProductList = ({ products, customclassName }) => {
 
  
 
@@ -13,7 +12,7 @@ const ProductList = ({ products }) => {
           let discountedPrice = (product.price) - (product.price * (product.discountPercentage / 100));
 
           return (
-            <Product key = {product.id} product = {{...product, discountedPrice}} />
+            <Product key = {product.id} product = {{...product, discountedPrice}} customclass={customclassName}/>
           )
         })
       }

@@ -45,7 +45,8 @@ export const fetchAsyncCategories = createAsyncThunk(
   async () => {
     try {
       const response = await Axios.get(
-        `${process.env.REACT_APP_BASEURL}products/categories`
+        `${process.env.REACT_APP_BASEURL}products/category-list`
+        // `${process.env.REACT_APP_BASEURL}products/categories`
       );
 
       return response.data;

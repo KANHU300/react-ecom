@@ -127,7 +127,6 @@ body {
   background: white;
   border: 1px solid #ccc;
   z-index: 1000;
-  width: 100%;
   width: 600px;
   height: auto;
   overflow-y: scroll;
@@ -978,4 +977,48 @@ body {
   height: 45px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.filter-page {
+  display: flex;
+  padding: 20px;
+  margin-top: 80px;
+}
+.filter-page .filters {
+  flex: 1;
+  max-width: 300px;
+  margin-right: 20px;
+}
+.filter-page .filters .filter-section {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.filter-page .filters .filter-section h3 {
+  margin-bottom: 10px;
+}
+.filter-page .filters .filter-section select,
+.filter-page .filters .filter-section input[type=range] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.filter-page .products {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+}
+.filter-page .products .product-card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin: 10px;
+  width: calc(33.333% - 20px);
+}
+.filter-page .products .product-card h4 {
+  margin-top: 0;
+}
+
+.custom-product-class {
+  width: 100% !important;
 }/*# sourceMappingURL=style.css.map */
